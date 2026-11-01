@@ -1,0 +1,85 @@
+{
+  "users": [
+    {
+      "id": "usr_1",
+      "name": "Admin User",
+      "email": "admin@focushub.io",
+      "role": "admin",
+      "status": "Active",
+      "department": "Management",
+      "avatar": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=150&auto=format&fit=crop&q=80",
+      "createdAt": "2026-01-01T00:00:00Z"
+    }
+  ],
+  "roles": [
+    {
+      "id": "admin",
+      "name": "Administrator",
+      "description": "Full access to dashboard, income, expenses, learnings, users and permissions.",
+      "isSystem": true,
+      "permissions": [
+        "income:view",
+        "income:create",
+        "income:edit",
+        "income:delete",
+        "expenses:view",
+        "expenses:create",
+        "expenses:edit",
+        "expenses:delete",
+        "learnings:view",
+        "learnings:create",
+        "learnings:edit",
+        "learnings:delete",
+        "users:view",
+        "users:create",
+        "users:edit",
+        "users:delete",
+        "permissions:view",
+        "permissions:manage",
+        "export:data"
+      ]
+    },
+    {
+      "id": "member",
+      "name": "Member",
+      "description": "Standard user access to view and add personal income, expenses, and learnings.",
+      "isSystem": false,
+      "permissions": [
+        "income:view",
+        "income:create",
+        "income:edit",
+        "expenses:view",
+        "expenses:create",
+        "expenses:edit",
+        "learnings:view",
+        "learnings:create",
+        "learnings:edit",
+        "export:data"
+      ]
+    }
+  ],
+  "permissionDefinitions": [
+    { "id": "income:view", "module": "Income", "label": "View Income Records", "description": "Can browse income records and summaries" },
+    { "id": "income:create", "module": "Income", "label": "Create Income", "description": "Can record new incoming income" },
+    { "id": "income:edit", "module": "Income", "label": "Edit Income", "description": "Can modify existing income data" },
+    { "id": "income:delete", "module": "Income", "label": "Delete Income", "description": "Can delete income records" },
+    { "id": "expenses:view", "module": "Expenses", "label": "View Expense Records", "description": "Can inspect expense records" },
+    { "id": "expenses:create", "module": "Expenses", "label": "Create Expense", "description": "Can record new expenses" },
+    { "id": "expenses:edit", "module": "Expenses", "label": "Edit Expense", "description": "Can modify existing expenses" },
+    { "id": "expenses:delete", "module": "Expenses", "label": "Delete Expense", "description": "Can delete expenses" },
+    { "id": "learnings:view", "module": "Learnings", "label": "View Learning Topics", "description": "Can view learning topics and progress" },
+    { "id": "learnings:create", "module": "Learnings", "label": "Create Learning Topic", "description": "Can add new learning topics" },
+    { "id": "learnings:edit", "module": "Learnings", "label": "Edit Learning & Hours", "description": "Can update study hours and status" },
+    { "id": "learnings:delete", "module": "Learnings", "label": "Delete Learning Topic", "description": "Can delete learning topics" },
+    { "id": "users:view", "module": "Users", "label": "View Users Directory", "description": "Can view list of users" },
+    { "id": "users:create", "module": "Users", "label": "Create New User", "description": "Can add new users" },
+    { "id": "users:edit", "module": "Users", "label": "Edit User Info", "description": "Can edit user details and role" },
+    { "id": "users:delete", "module": "Users", "label": "Delete User", "description": "Can remove users" },
+    { "id": "permissions:view", "module": "Permissions", "label": "View Roles Matrix", "description": "Can view roles and permissions" },
+    { "id": "permissions:manage", "module": "Permissions", "label": "Manage Roles & Matrix", "description": "Can create roles and toggle permissions" },
+    { "id": "export:data", "module": "Export", "label": "Export Data (PDF/XLSX/CSV/DOCX)", "description": "Can export reports" }
+  ],
+  "income": [],
+  "expenses": [],
+  "learnings": []
+}
